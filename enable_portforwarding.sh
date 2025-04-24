@@ -3,9 +3,9 @@
 INTERNET_IFACE="eth4"
 # Interfaz y detalles para el port forwarding
 FORWARD_IFACE="eth2"
-FORWARD_PORT="8080"
+FORWARD_PORT="80"
 HOST_PORT="2025"
-TARGET_IP="192.168.40.14"
+TARGET_IP="192.168.40.2"
 
 # Verificar que tenemos una IP válida
 if [ -n "$TARGET_IP" ]; then
