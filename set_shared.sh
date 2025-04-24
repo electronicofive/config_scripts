@@ -30,7 +30,7 @@ while IFS= read -r line; do
         # Modificar la conexión a shared con IP específica
         nmcli connection modify "$conn" \
             ipv4.method shared \
-            ipv4.addresses "192.168.${subnet_counter}.1/24"
+            ipv4.addresses "192.168.${subnet_counter}.1/30"
         
         echo "✓ Conexión '$conn' modificada a método 'shared' con IP 192.168.${subnet_counter}.1"
         
@@ -42,7 +42,7 @@ while IFS= read -r line; do
         
         # Aún así actualizar la IP si queremos estandarizar
         echo "Actualizando IP a 192.168.${subnet_counter}.1"
-        nmcli connection modify "$conn" ipv4.addresses "192.168.${subnet_counter}.1/24"
+        nmcli connection modify "$conn" ipv4.addresses "192.168.${subnet_counter}.1/30"
         
         
         echo "✓ IP actualizada para '$conn'"
