@@ -55,8 +55,14 @@ else
     iptables-save > /etc/iptables/rules.v4
     
     echo "Reglas guardadas en /etc/iptables/rules.v4"
-    echo "Para cargarlas automáticamente al iniciar, instala iptables-persistent:"
+    echo "Para cargarlas automáticamente al iniciar, se instalará iptables-persistent:"
     echo "sudo apt install iptables-persistent"
+    sudo apt install iptables-persistent -y
+    if command -v netfilter-persistent &> /dev/null; then
+    	netfilter-persistent save
+    else
+    	echo "Error instalando iptables"
+    fi
 fi
 
 echo "=== Configuración de iptables completada ==="
