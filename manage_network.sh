@@ -6,10 +6,10 @@
 SCRIPT_DIR="$(dirname "$0")" 
 
 # Nombres de los scripts originales
-CONFIG_IPTABLES_SCRIPT="${SCRIPT_DIR}/config_iptables.sh"
-SET_SHARED_SCRIPT="${SCRIPT_DIR}/set_shared.sh"
-RESTORE_IPTABLES_SCRIPT="${SCRIPT_DIR}/restore_iptables.sh"
-RESTORE_DHCP_SCRIPT="${SCRIPT_DIR}/restore_dhcp.sh"
+CONFIG_IPTABLES_SCRIPT="${SCRIPT_DIR}/port_config/config_iptables.sh"
+SET_SHARED_SCRIPT="${SCRIPT_DIR}/port_config/set_shared.sh"
+RESTORE_IPTABLES_SCRIPT="${SCRIPT_DIR}/port_config/restore_iptables.sh"
+RESTORE_DHCP_SCRIPT="${SCRIPT_DIR}/port_config/restore_dhcp.sh"
 
 # --- Verificación de scripts ---
 # Comprueba si los scripts necesarios existen y son ejecutables
